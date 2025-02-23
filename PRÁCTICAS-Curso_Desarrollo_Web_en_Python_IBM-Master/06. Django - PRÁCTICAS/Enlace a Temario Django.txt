@@ -1,0 +1,2 @@
+Enlace directo al temario Django.
+"C:\Users\Montse\Desktop\PYTHON\00. IBM - Desarrollo WEB en PYTHON\Mod.9. Anexo+Django"
