@@ -1,7 +1,0 @@
-git remote add origin https://github.com/WNYZ19/IBM_Curso_Desarrollo_Web_con_Python.git
-git push -u Rama_Principal
-
-
-
-IBM_Curso_Desarrollo_Web_con_Python
-Copia_Repositorio_Profesor_Curso_Desarrollar_Web_con_Python_de_IBM
