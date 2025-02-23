@@ -1,0 +1,170 @@
+comandos git
+
+	* version de git
+		git --version
+		
+	* ayuda de git
+		git help
+	
+	* usurio global
+		git config --global user.name=""
+		git config --global user.email=""
+		
+		
+	* inicializa el repositorio
+		git init
+		
+	* informacion de la rama y estado del repositorio
+		git status
+		
+	*prepara archivos para guardar los cambios
+		git add .
+		
+	*guardar cambios 
+		git commit -m"mensaje"
+		
+	* Recosntruir proyecto al ultimo commit
+		git checkout -- .
+	
+	* Recosntruir un archivo al ultimo commit
+		git checkout -- NOMBRE DEL ARCHIVO	
+		
+	* cambiar nombre de rama
+		git branch -m master main
+	
+	*saber en que rama estoy
+		git branch
+		
+	* cambiar nombre de master globalmente
+		git config --global init.defaultBranch main
+		
+	*sacar del add .
+		git reset nombre del archivo
+		
+	*	ver los log del repositorio
+		git log
+		git log --oneline --decorate --all --graph
+		
+	* agregar archivos por lote al add. en la raiz del proyecto 
+		git add *.html (se agrupan por extencion)
+		
+	*agregar archivo dentro del directorio
+		git add js/*.js  primero va nombre del directorio
+		
+	*	agregar carpetas con archivos git
+	    git add uploads/.gitkeep
+		
+	* agregar todo lo del directorio y subdirectorios
+		git add css/
+		
+	* crear alias (.nombre de alias en este caso es la s)
+		git config --global alias.s "status --short"
+		
+	*editar un alisas
+		git config --global -e
+		
+	*	ver diferencia en el archivo modificado
+		git diff
+		
+	* ver cambios en staged
+		git diff --staged
+		
+	*	corregir mensaje del commit
+		git commit --amend -m "nuevo mensaje"
+		
+	* añadir un archivo al commit anterior
+		git reset --soft HEAD^
+		
+	*guardar cambios de un comit y salir
+		:wq!
+		
+	* olvida el stage echo y vuelve en el tiempo
+		git reset --mixed rama a la cual quiero volver
+		
+	*elimina todo lo que hay en las ramas a partir de una rama
+		git reset --hard rama a la cual quiero volver
+		
+	*ver hitorico de log eliminados
+		git reflog
+		
+	*	cambiar el nombre de un archivo
+		git mv nombre del archivo nuevo nombre archivo
+		
+	*eliminar archivo
+		*git rm nombre del archivo
+		
+	*crear ramas
+		git branch nombre rama
+		
+	*ver las ramas que hay o en la que estoy
+		git branch
+		
+	*cambiar de rama
+		git checkout nombre de rama
+	
+	*mesclar ramas hay que estar eb la rama donde voy a llevar los cambios
+		git merge nombre rama
+	
+	*git borrar una rama que ya no utilicemos
+		git branch -d nombre de rama
+		
+	* crear una rama y pasarnos automaticamente a ella
+		git checkout -b nombre de la rama
+		
+	* crear tags en git
+		git tag nombre tag // 
+		git tag -a v1.0.0 -m  "version 1.0.0 lista"
+		
+	* tag a un commit en especifico
+		git tag -a v0.1.0 codigo de commit -m "Version alpha de nuestra app"
+		
+	* ver los tag que hay
+		git tag
+		
+	* eliminar un tag
+		git tag -d nombre del tag
+		
+	* ver informacion del tag
+		git show nombre del tag 'v0.1.0'
+		
+	*	bobeda de cambios
+	    git stash
+		
+	* listado de stash
+		git stash list
+	
+	* recuperar un stage el ultimo
+		git stash pop
+			
+	* borrar stash	todos
+		git stash clear
+		
+	*recuperar un stash en especifico
+		git stash apply nombre del stash
+		
+	* borrar un stash en especifico
+		git stash drop nombre del stash 
+		
+	* ver un stash
+		git stash show nombre stash
+		
+	*agregar un comentario al stash
+		hit stash save "mensaje"
+		
+	* rebase debe estar en la rama donde se desea hacer el rebase
+		git rebase master
+		
+	* cambiar un mensaje de commit	
+		git rebase -i HEAD~4
+		
+	* modificar comit separar archivos y hacer comits por separado
+		git rebase -i HEAD~3
+		
+	* traer datros  del origen
+		git pull 
+		
+	*configuracion global para el pull	
+		git config --global pull.ff only
+		
+	*configuracion global para pull con conflitos 
+		git config --global pull.rebase true
